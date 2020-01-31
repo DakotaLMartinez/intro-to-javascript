@@ -8,3 +8,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
   btn.addEventListener('click', handleClick)
 });
 
+for(let i = 0 ; i < 10 ; i++) {
+  console.log(i);
+}
