@@ -1,109 +1,6 @@
-// data for albums
-let albums = [
-  {
-    coverArt: "http://mrmrs.github.io/images/0006.jpg",
-    title: 'Title of Album',
-    artist: 'Artist Name'
-  },
-  {
-    coverArt: "http://mrmrs.github.io/images/0002.jpg",
-    title: 'Title of Album',
-    artist: 'Artist Name'
-  },
-  {
-    coverArt: "http://mrmrs.github.io/images/0003.jpg",
-    title: 'Title of Album',
-    artist: 'Artist Name'
-  },
-  {
-    coverArt: "http://mrmrs.github.io/images/0004.jpg",
-    title: 'Title of Album',
-    artist: 'Artist Name'
-  },
-  {
-    coverArt: "http://mrmrs.github.io/images/0007.jpg",
-    title: 'Title of Album',
-    artist: 'Artist Name'
-  },
-  {
-    coverArt: "http://mrmrs.github.io/images/0008.jpg",
-    title: 'Title of Album',
-    artist: 'Artist Name'
-  },
-  {
-    coverArt: "http://mrmrs.github.io/images/0009.jpg",
-    title: 'Title of Album',
-    artist: 'Artist Name'
-  },
-  {
-    coverArt: "http://mrmrs.github.io/images/0010.jpg",
-    title: 'Title of Album',
-    artist: 'Artist Name'
-  },
-  {
-    coverArt: "http://mrmrs.github.io/images/0011.jpg",
-    title: 'Title of Album',
-    artist: 'Artist Name'
-  },
-  {
-    coverArt: "http://mrmrs.github.io/images/0012.jpg",
-    title: 'Title of Album',
-    artist: 'Artist Name'
-  },
-  {
-    coverArt: "http://mrmrs.github.io/images/0013.jpg",
-    title: 'Title of Album',
-    artist: 'Artist Name'
-  },
-  {
-    coverArt: "http://mrmrs.github.io/images/0014.jpg",
-    title: 'Title of Album',
-    artist: 'Artist Name'
-  },
-  {
-    coverArt: "http://mrmrs.github.io/images/0015.jpg",
-    title: 'Title of Album',
-    artist: 'Artist Name'
-  },
-  {
-    coverArt: "http://mrmrs.github.io/images/0016.jpg",
-    title: 'Title of Album',
-    artist: 'Artist Name'
-  },
-  {
-    coverArt: "http://mrmrs.github.io/images/0017.jpg",
-    title: 'Title of Album',
-    artist: 'Artist Name'
-  },
-  {
-    coverArt: "http://mrmrs.github.io/images/0018.jpg",
-    title: 'Title of Album',
-    artist: 'Artist Name'
-  },
-  {
-    coverArt: "http://mrmrs.github.io/images/0019.jpg",
-    title: 'Title of Album',
-    artist: 'Artist Name'
-  },
-  {
-    coverArt: "http://mrmrs.github.io/images/0020.jpg",
-    title: 'Title of Album',
-    artist: 'Artist Name'
-  },
-  {
-    coverArt: "http://mrmrs.github.io/images/0021.jpg",
-    title: 'Title of Album',
-    artist: 'Artist Name'
-  },
-  {
-    coverArt: "http://mrmrs.github.io/images/0022.jpg",
-    title: 'Title of Album',
-    artist: 'Artist Name'
-  }
-];
-// convert data for events into HTML markup to display
-albums.renderList = function() {
-  return this.map(function(album){
+let albums = []
+const renderList = (albums) => {
+  return albums.map(function(album){
     return `
     <article class="fl w-100 w-50-m  w-25-ns pa2-ns">
       <div class="aspect-ratio aspect-ratio--1x1">
@@ -128,13 +25,19 @@ function getForm() {
   return document.getElementById('addAlbum')
 }
 
-function updateAlbumList() {
-  getRoot().innerHTML = albums.renderList()
+function updateAlbumList(albums) {
+  getRoot().innerHTML = renderList(albums)
 }
 
 window.addEventListener('DOMContentLoaded', (event) => {
+  
   console.log('DOM fully loaded and parsed');
-  updateAlbumList()
+  fetch("http://localhost:3000/albums")
+    .then(res => res.json())
+    .then(json => {
+      albums = json
+      updateAlbumList(albums)
+    })
   getForm().addEventListener('submit', (event) => {
     event.preventDefault();
     let artistName = event.target.querySelector('#artistName').value
@@ -145,7 +48,17 @@ window.addEventListener('DOMContentLoaded', (event) => {
       title: title,
       artist: artistName
     }
-    albums.unshift(album)
-    updateAlbumList()
+    fetch("http://localhost:3000/albums", {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(album)
+    })
+      .then(res => res.json())
+      .then(json => {
+        albums.push(json)
+        updateAlbumList(albums)
+      })
   })
 });

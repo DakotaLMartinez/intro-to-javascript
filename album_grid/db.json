@@ -1,0 +1,142 @@
+{
+  "albums": [
+    {
+      "id": 1,
+      "coverArt": "http://mrmrs.github.io/images/0006.jpg",
+      "title": "Title of Album",
+      "artist": "Artist Name"
+    },
+    {
+      "id": 2,
+      "coverArt": "http://mrmrs.github.io/images/0002.jpg",
+      "title": "Title of Album",
+      "artist": "Artist Name"
+    },
+    {
+      "id": 3,
+      "coverArt": "http://mrmrs.github.io/images/0003.jpg",
+      "title": "Title of Album",
+      "artist": "Artist Name"
+    },
+    {
+      "id": 4,
+      "coverArt": "http://mrmrs.github.io/images/0004.jpg",
+      "title": "Title of Album",
+      "artist": "Artist Name"
+    },
+    {
+      "id": 5,
+      "coverArt": "http://mrmrs.github.io/images/0007.jpg",
+      "title": "Title of Album",
+      "artist": "Artist Name"
+    },
+    {
+      "id": 6,
+      "coverArt": "http://mrmrs.github.io/images/0008.jpg",
+      "title": "Title of Album",
+      "artist": "Artist Name"
+    },
+    {
+      "id": 7,
+      "coverArt": "http://mrmrs.github.io/images/0009.jpg",
+      "title": "Title of Album",
+      "artist": "Artist Name"
+    },
+    {
+      "id": 8,
+      "coverArt": "http://mrmrs.github.io/images/0010.jpg",
+      "title": "Title of Album",
+      "artist": "Artist Name"
+    },
+    {
+      "id": 9,
+      "coverArt": "http://mrmrs.github.io/images/0011.jpg",
+      "title": "Title of Album",
+      "artist": "Artist Name"
+    },
+    {
+      "id": 10,
+      "coverArt": "http://mrmrs.github.io/images/0012.jpg",
+      "title": "Title of Album",
+      "artist": "Artist Name"
+    },
+    {
+      "id": 11,
+      "coverArt": "http://mrmrs.github.io/images/0013.jpg",
+      "title": "Title of Album",
+      "artist": "Artist Name"
+    },
+    {
+      "id": 12,
+      "coverArt": "http://mrmrs.github.io/images/0014.jpg",
+      "title": "Title of Album",
+      "artist": "Artist Name"
+    },
+    {
+      "id": 13,
+      "coverArt": "http://mrmrs.github.io/images/0015.jpg",
+      "title": "Title of Album",
+      "artist": "Artist Name"
+    },
+    {
+      "id": 14,
+      "coverArt": "http://mrmrs.github.io/images/0016.jpg",
+      "title": "Title of Album",
+      "artist": "Artist Name"
+    },
+    {
+      "id": 15,
+      "coverArt": "http://mrmrs.github.io/images/0017.jpg",
+      "title": "Title of Album",
+      "artist": "Artist Name"
+    },
+    {
+      "id": 16,
+      "coverArt": "http://mrmrs.github.io/images/0018.jpg",
+      "title": "Title of Album",
+      "artist": "Artist Name"
+    },
+    {
+      "id": 17,
+      "coverArt": "http://mrmrs.github.io/images/0019.jpg",
+      "title": "Title of Album",
+      "artist": "Artist Name"
+    },
+    {
+      "id": 18,
+      "coverArt": "http://mrmrs.github.io/images/0020.jpg",
+      "title": "Title of Album",
+      "artist": "Artist Name"
+    },
+    {
+      "id": 19,
+      "coverArt": "http://mrmrs.github.io/images/0021.jpg",
+      "title": "Title of Album",
+      "artist": "Artist Name"
+    },
+    {
+      "id": 20,
+      "coverArt": "http://mrmrs.github.io/images/0022.jpg",
+      "title": "Title of Album",
+      "artist": "Artist Name"
+    },
+    {
+      "coverArt": "https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto/gigs/715018/original/9b27a8924c7f731580084bb894550bf8696223c6/design-your-album-cover.jpg",
+      "title": "Music is My Therapy",
+      "artist": "JayBall",
+      "id": 21
+    },
+    {
+      "coverArt": "https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto/gigs/715018/original/9b27a8924c7f731580084bb894550bf8696223c6/design-your-album-cover.jpg",
+      "title": "Music is My Therapy",
+      "artist": "JayBall",
+      "id": 22
+    },
+    {
+      "coverArt": "http://t0.gstatic.com/images?q=tbn%3AANd9GcQ59JGe4SemZL8ccwIFCGQc1HMtgkOTJJPrkqFTKvMX6wd5CdBM6fObUa_Gg3GLVBN0_uQ6lsc&usqp=CAc",
+      "title": "Uprising",
+      "artist": "Bob Marley",
+      "id": 23
+    }
+  ]
+}
